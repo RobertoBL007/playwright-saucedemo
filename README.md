@@ -11,7 +11,7 @@ Suite de testing end-to-end y de API para [Saucedemo](https://www.saucedemo.com)
 
 ## 📁 Estructura del proyecto
 
-\`\`\`
+
 Auto1/
 ├── pages/              # Clases del Page Object Model
 │   ├── LoginPage.ts
@@ -24,7 +24,7 @@ Auto1/
 │   └── fixtures.ts     # Fixture personalizado: sesión autenticada
 ├── playwright.config.ts
 └── .github/workflows/  # Pipeline de CI
-\`\`\`
+
 
 ## ✅ Qué cubre
 
@@ -38,7 +38,7 @@ Auto1/
 
 ## 🚀 Cómo ejecutarlo
 
-\`\`\`bash
+```bash
 # Instalar dependencias
 npm install
 
@@ -57,7 +57,7 @@ npx playwright test --project=chromium
 
 # Ver el reporte HTML
 npx playwright show-report
-\`\`\`
+```
 
 ## 👤 Autor
 
