@@ -63,4 +63,4 @@ npx playwright show-report
 
 **Roberto Blasco**
 QA Engineer | Certificado ISTQB Foundation & Agile Tester
-[LinkedIn](www.linkedin.com/in/roberto-blasco-lópez-qa) · [GitHub](https://github.com/RobertoBL007)
+[LinkedIn]([www.linkedin.com/in/roberto-blasco-lópez-qa](https://www.linkedin.com/in/roberto-blasco-l%C3%B3pez-qa/)) · [GitHub](https://github.com/RobertoBL007)
