@@ -1,10 +1,14 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 import { InventoryPage } from '../pages/InventoryPage';
+import * as allure from 'allure-js-commons';
 
-test.describe('Login en Saucedemo', () => {
 
+ test.describe('Login en Saucedemo', () => {
   test('login correcto lleva al inventario', async ({ page }) => {
+    await allure.feature('Login');
+    await allure.description('El usuario debe poder iniciar sesión correctamente y ser redirigido al inventario');
+    await allure.severity('critical');
     const loginPage = new LoginPage(page);
     const inventoryPage = new InventoryPage(page);
 
@@ -14,7 +18,7 @@ test.describe('Login en Saucedemo', () => {
     await inventoryPage.waitForLoad();
 
     await expect(await inventoryPage.isLoaded()).toBeVisible();
-    await expect(await inventoryPage.getProductCount()).toBe(6);
+    await expect(inventoryPage.getProductCount()).resolves.toBe(6);
   });
 
   test('login incorrecto muestra error', async ({ page }) => {
@@ -35,5 +39,4 @@ test.describe('Login en Saucedemo', () => {
     await expect(page).not.toHaveURL(/inventory/);
     await expect(await loginPage.getErrorMessage()).toBeVisible();
   });
-
-});
+}); 
