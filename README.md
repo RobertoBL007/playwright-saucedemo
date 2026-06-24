@@ -38,9 +38,7 @@ Auto1/
 
 ## 🚀 Cómo ejecutarlo
 
-## 📊 Reportes
-
-
+```bash
 # Instalar dependencias
 npm install
 
@@ -56,21 +54,22 @@ npx playwright test
 
 # Ejecutar en un navegador específico
 npx playwright test --project=chromium
+```
 
-# Ver el reporte HTML
+## 📊 Reportes
+
 Este proyecto genera dos tipos de informes:
 
 - **Nativo de Playwright** — rápido, ideal para desarrollo diario
-  ```bash
+```bash
   npx playwright show-report
-  ```
+```
 
 - **Allure Report** — informe visual con categorías, severidad y gráficos de tendencias
-  ```bash
+```bash
   npx allure generate allure-results --clean
   npx allure open
-  ```
-```bash
+```
 
 ## 👤 Autor
 
