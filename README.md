@@ -1,5 +1,7 @@
 # 🎭 Suite de Automatización de Tests — Saucedemo
 
+[![Playwright Tests](https://github.com/RobertoBL007/playwright-saucedemo/actions/workflows/playwright.yml/badge.svg)](https://github.com/RobertoBL007/playwright-saucedemo/actions/workflows/playwright.yml)
+
 Suite de testing end-to-end y de API para [Saucedemo](https://www.saucedemo.com), construida con Playwright y TypeScript siguiendo buenas prácticas del sector: Page Object Model, fixtures personalizados e integración CI/CD.
 
 ## 🛠️ Stack tecnológico
