@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    - name: Set Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: 21
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
@@ -22,9 +27,20 @@ jobs:
       env:
         SAUCE_USER: ${{ secrets.SAUCE_USER }}
         SAUCE_PASS: ${{ secrets.SAUCE_PASS }}
-    - uses: actions/upload-artifact@v4
+    - name: Run Allure report generation
+      run: npx allure generate allure-results --clean
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+    - name: Upload artifacts allure
+      uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: allure-report
+        path: allure-report/
+        retention-days: 30
+
