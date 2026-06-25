@@ -24,7 +24,7 @@ import namesForPay from '../fixtures/data/namesForPay.json';
     await page.waitForURL('**/inventory.html');
     await inventoryPage.waitForLoad();
 
-  await expect(page.getByText('TEXTO_QUE_NO_EXISTE')).toBeVisible();
+    await expect(await inventoryPage.isLoaded()).toBeVisible();
     await expect(inventoryPage.getProductCount()).resolves.toBe(6);
   });
 
