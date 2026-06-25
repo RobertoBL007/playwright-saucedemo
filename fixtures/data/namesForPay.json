@@ -1,0 +1,5 @@
+[
+  { "name": "Nombre1", "lastname": "Apellido1", "postalCode": "12345" },
+  { "name": "Nombre2", "lastname": "Apellido2", "postalCode": "67890" },
+  { "name": "Nombre3", "lastname": "Apellido3", "postalCode": "54321" }
+]

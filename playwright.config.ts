@@ -17,6 +17,7 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
  */
 export default defineConfig({
   testDir: './tests',
+  timeout: 30000,  // ← cambia el valor aquí
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -30,7 +31,7 @@ export default defineConfig({
   ['html'],
   ['allure-playwright'],
 ],
-  timeout: 60000,        // ← timeout total del test
+          
   expect: {
     timeout: 10000,
     },
